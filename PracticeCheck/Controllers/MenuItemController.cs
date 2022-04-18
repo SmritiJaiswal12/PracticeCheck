@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace PracticeCheck.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class MenuItemController : ControllerBase
     {
-        [HttpGet]
+
+        [HttpGet]       
         public IEnumerable<MenuItem> Get()
         {
             return new List<MenuItem> { new MenuItem()
